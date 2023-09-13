@@ -1,9 +1,8 @@
 @import "fonts";
-@import "animations";
+//@import "animations";
 
 $main-font: 'Roboto', sans-serif;
-$second-font: 'RUBBERNECK', sans-serif;
-$kolker: 'Kolker Brush', cursive;
+
 
 $main-color: #303030;
 $blue: #0B7AC9;
@@ -104,14 +103,6 @@ img.lazyload, video.lazyload {
 }
 
 
-.container-h {
-  width: 100%;
-  max-width: 100%;
-  padding: 0 9.3827vw;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 
 .container {
   width: 100%;
@@ -135,12 +126,6 @@ a, button {
 }
 
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
 
 p, h1, ul, ol, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -229,9 +214,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  //font-family: $second-font;
-}
+
 
 h1 {
   font-style: normal;
