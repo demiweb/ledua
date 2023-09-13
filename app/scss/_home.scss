@@ -4277,7 +4277,7 @@ body {
 
       color: $blue;
       text-align: center;
-      font-size: vw(32px);
+      font-size: 32px;
       font-style: normal;
       font-weight: 700;
       line-height: 100%;
@@ -4287,7 +4287,7 @@ body {
       justify-content: flex-start;
 
       strong {
-        font-size: vw(20px);
+        font-size: 20px;
         font-weight: inherit;
       }
     }
@@ -4306,16 +4306,21 @@ body {
 
     color: $blue;
     text-align: center;
-    font-size: vw(16px);
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
-    margin-top: vw(11px);
+    margin-top: 11px;
     text-transform: initial;
   }
 
 }
-
+@media screen and (min-width: 2000px) {
+  .single-award .img p {
+    top: 50px;
+    font-size: 28px;
+  }
+}
 .about-text {
   width: 100%;
   display: flex;
