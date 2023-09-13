@@ -3257,7 +3257,7 @@ body {
 .modal-window {
   position: fixed;
   z-index: 20;
-  top: 0;
+  top: -100%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -3267,13 +3267,14 @@ body {
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transition-delay: 0.3s !important;
 
   &.visible {
     transition-delay: 0s !important;
     opacity: 1;
     pointer-events: auto;
+    top: 0;
 
     .modal-container {
       transform: translate(0, 0);
@@ -4315,12 +4316,14 @@ body {
   }
 
 }
+
 @media screen and (min-width: 2000px) {
   .single-award .img p {
     top: 50px;
     font-size: 28px;
   }
 }
+
 .about-text {
   width: 100%;
   display: flex;

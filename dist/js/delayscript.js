@@ -39,50 +39,7 @@ function helloConsole() {
 
 helloConsole();
 
-// scroll animations
-var anim = document.querySelectorAll('.anim');
 
-function scrollAnimations() {
-    if (anim.length) {
-        var observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                var el = entry.target;
-                if (entry.isIntersecting) {
-                    if (el.classList.contains('anim-js')) {
-
-                    } else {
-                        el.style.animationDelay = el.dataset.animDelay + 'ms';
-                        el.style.animationDuration = el.dataset.animDuration + 'ms';
-                        el.style.animationName = el.dataset.anim;
-                    }
-                    el.classList.add('done');
-
-
-                } else {
-                    el.classList.remove('done');
-                }
-
-            })
-        }, {threshold: .5});
-        if (window.innerWidth > 991) {
-            anim.forEach(animate => {
-                observer.observe(animate)
-            })
-        } else {
-
-            anim.forEach(animate => {
-
-                observer.observe(animate)
-
-
-            })
-        }
-    }
-}
-
-scrollAnimations();
-
-//
 
 //control opens
 
