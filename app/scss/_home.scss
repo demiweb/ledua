@@ -6768,4 +6768,10 @@ body {
     }
   }
 }
+.swiper-slide {
+  flex-shrink: 0;
+}
+.swiper {
+  overflow: hidden;
+}
 
