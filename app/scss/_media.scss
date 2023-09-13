@@ -2542,6 +2542,9 @@
   .about-awards {
 
   }
+  .row-content .swiper-wrapper {
+    overflow: auto;
+  }
   .single-award span {
     margin-top: 14px;
   }
