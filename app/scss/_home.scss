@@ -479,6 +479,7 @@ body {
   width: 100%;
   bottom: 0;
   opacity: 0;
+  z-index: 2;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
 
