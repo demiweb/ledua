@@ -166,6 +166,9 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .product-page__slider {
+    top: 150px;
+  }
   .download-catalog::before {
     width: 256px;
     height: 180px;
@@ -665,6 +668,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .product-page__slider {
+    position: static;
+  }
   .catalog-wrap {
     gap: 30px;
 
