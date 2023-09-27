@@ -444,4 +444,56 @@ tls.forEach((tl) => {
     var mask = IMask(tl, maskOptions);
 });
 
+//zoom image
+
+let imagesZoom = [...document.querySelectorAll('.product-slider .swiper img')];
+
+
+function zoomImages() {
+    if (imagesZoom.length) {
+        if (window.innerWidth > 767) {
+            var zoom_container_size = $( '.zoom-container').height();
+            var zoom_area_size = 200;
+            var zoom_radius = zoom_area_size / 2;
+
+
+            $( '.product-slider .swiper img' ).mousemove(function(e) {
+                // Show original picture
+                var sr = this.src;
+                var $original = $( '.zoom-container img');
+                $original[0].src = this.src;
+                var $container = $original.parent();
+                $container.removeClass( 'hidden' );
+                // Thumbnail
+                var offset = $( this ).offset();
+                var tX = e.pageX - offset.left;
+                var tY = e.pageY - offset.top;
+                // We stay inside the limits of the zoomable area
+                tX = Math.max( zoom_radius, Math.min( $( this ).width() - zoom_radius, tX ) );
+                tY = Math.max( zoom_radius, Math.min( $( this ).height() - zoom_radius, tY ) );
+                // Ratios
+                var ratioX = ( $original.width() - zoom_container_size) / ( $( this ).width() - zoom_area_size );
+                var ratioY = ( $original.height() - zoom_container_size) / ( $( this ).height() - zoom_area_size );
+                // Margin to be set in the original
+                var moX = -Math.floor( ( tX - zoom_radius ) * ratioX );
+                var moY = -Math.floor( ( tY - zoom_radius ) * ratioY );
+                // Apply zoom efect
+                $original.css( 'marginLeft', moX );
+                $original.css( 'marginTop', moY );
+                // Log values
+            });
+
+            $( '.product-slider .swiper img' ).mouseout(function(e) {
+                var $original = $( '.zoom-container img');
+                var $container = $original.parent();
+                $container.addClass( 'hidden' );
+            });
+        }
+
+    }
+}
+
+zoomImages();
+
+
 
