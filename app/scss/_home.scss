@@ -1167,20 +1167,24 @@ body {
   img {
     height: 100%;
     width: auto;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.3s ease-in-out !important;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotateY(0) rotateZ(0);
-    backface-visibility: hidden;
+    transform: translate(-50%, -50%);
     perspective: 400px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 3 !important;
 
     &.hov {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) rotateY(180deg) rotateZ(25deg);
-
+      opacity: 0 !important;
+      z-index: 4;
+      visibility: hidden !important;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -1190,10 +1194,13 @@ body {
   &:hover {
     .single-product-image {
       img {
-        transform: translate(-50%, -50%) rotateY(180deg) rotateZ(25deg);
+        transform: translate(-50%, -50%);
 
         &.hov {
-          transform: translate(-50%, -50%) rotateY(0) rotateZ(0);
+          visibility: visible !important;
+          z-index: 4 !important;
+          transform: translate(-50%, -50%);
+          opacity: 1 !important;
         }
       }
     }
