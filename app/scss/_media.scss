@@ -2309,7 +2309,7 @@
   }
   .single-home-catalog {
     width: 100%;
-    background: #F0F0F0 !important;
+    //background: #F0F0F0 !important;
   }
   .header-top__cont {
     gap: 20px;
@@ -2725,6 +2725,9 @@
 }
 
 @media screen and (max-width: 430px) {
+  .cart-section.catalog-section {
+    padding: 20px 20px 30px;
+  }
   .checkout-page__wrap {
     width: calc(100% + 40px);
     margin-left: -20px;
