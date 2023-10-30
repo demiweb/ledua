@@ -2725,6 +2725,9 @@
 }
 
 @media screen and (max-width: 430px) {
+  .header-top__left {
+    gap: 0;
+  }
   .cart-section.catalog-section {
     padding: 20px 20px 30px;
   }
