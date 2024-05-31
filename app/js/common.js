@@ -496,4 +496,39 @@ function zoomImages() {
 zoomImages();
 
 
+//tabs
+
+let tabBtn = [...document.querySelectorAll('.tab-btn')];
+
+function changeTab() {
+    if (!tabBtn.length) {
+
+    } else {
+        tabBtn.forEach((btn, k) => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('active')) {
+
+                } else {
+                    tabBtn.forEach((btn2) => {
+                        btn2.classList.remove('active');
+                    });
+                    btn.classList.add('active');
+                    [...btn.closest('.tabs-owner').querySelectorAll('.item-tab')].forEach((tab, m) => {
+                        if (m === k) {
+                            tab.classList.add('active');
+                        } else {
+                            tab.classList.remove('active');
+
+                        }
+                    })
+                }
+            })
+        })
+    }
+}
+
+changeTab();
+
+//tabs
+
 

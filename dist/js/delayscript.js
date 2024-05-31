@@ -136,9 +136,9 @@ function getRaty() {
         if ($(this).html() == '') {
             $(this).raty({
                 readOnly: true,
-                starHalf: './img/star-clear.svg',
-                starOn: './img/star-full.svg',
-                starOff: './img/star-clear.svg',
+                starHalf: 'catalog/view/theme/ledua/img/star-clear.svg',
+                starOn: 'catalog/view/theme/ledua/img/star-full.svg',
+                starOff: 'catalog/view/theme/ledua/img/star-clear.svg',
                 hints: ['a', null, '', null, '', null]
             });
         }
